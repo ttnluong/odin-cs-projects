@@ -13,10 +13,9 @@ const mergeSort = function(arr) {
 
 const merge = function (left, right) {
   const result = [];
-  let i = 0; // pointer for left
-  let j = 0; // pointer for right
+  let i = 0;
+  let j = 0;
 
-  // Take the smaller front item until one side runs out
   while (i < left.length && j < right.length) {
     if (left[i] <= right[j]) {
       result.push(left[i]);
@@ -27,7 +26,6 @@ const merge = function (left, right) {
     }
   }
 
-  // Add leftovers (only one side will have any)
   return [...result, ...left.slice(i), ...right.slice(j)];
 };
 
